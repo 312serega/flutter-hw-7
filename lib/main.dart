@@ -64,16 +64,6 @@ class _FirstPageState extends State<FirstPage> {
             ],
           ),
         ),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {
-        //     Navigator.push(
-        //       context,
-        //       MaterialPageRoute(
-        //         builder: (context) => SecondPage(),
-        //       ),
-        //     );
-        //   },
-        // ),
       ),
     );
   }
@@ -351,19 +341,23 @@ class _ThirdPageState extends State<ThirdPage> {
         backgroundColor: Color(0xffF5F5F5),
         appBar: AppBar(
           automaticallyImplyLeading: true,
+          backgroundColor: Color(0xffF5F5F5),
           shadowColor: Colors.transparent,
           leading: IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: Icon(Icons.arrow_back),
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
           ),
           // title: Text('test'),
         ),
         body: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+              padding: EdgeInsets.only(left: 16, right: 16, bottom: 8),
               child: Text(
                 'Управление по контролю, надзору за водными ресурсами и объектами (далее УКНВРиО) 29 июля 2020 года провело рабочее видео-совещание.',
                 style: TextStyle(
